@@ -8,11 +8,12 @@ const fs = require('fs')
 
 //Stream 的写入方式
 const writer = fs.createWriteStream('./bar.txt',{
-    flags: 'a',
+    // flags: 'a'，a时没有在4开始的位置进行追加文本，而是在文本最后进行追加，而r+则可以在4位置进行追加
+    flags: 'r+',
     start: 4
 })
 
-writer.write('你好啊11',err => {
+writer.write('你好啊22',err => {
     if(err) {
         console.log(err);
         return;
@@ -26,7 +27,7 @@ writer.write('李云鹤',err => {
 
 // writer.close()
 
-// 1.wirte("world"),2.close()
+// 1.wirte("world"),2.end()
 writer.end('world')
 
 writer.on('close',()=>{
