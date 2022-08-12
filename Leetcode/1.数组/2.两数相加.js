@@ -20,9 +20,52 @@
  * @param {ListNode} l2
  * @return {ListNode}
  */
-var addTwoNumbers = function(l1, l2) {
-  
-};
 
+// 解题思路：
+// 1. 新建一个虚拟节点，
+// 2. 将l1，l2链表的和放到虚拟节点后面，并标记是否超过10，超过要进位
+// 3.下一次求l1，l2的和要将进位加进去
+
+// ListNode构造器，用于创建链表的每个节点
+function ListNode(val, next) {
+    this.val = (val===undefined ? 0 : val)
+    this.next = (next===undefined ? null : next)
+}
+// 生成链表
+function generateLinklist(arr) {
+    let head = new ListNode(arr[0]), // 初始化第一个节点作为头节点
+        curr = head; // curr指针保存当前节点
+    for(let i=1; i<arr.length; i++) {
+        curr.next = new ListNode(arr[i]); // 创建next节点
+        curr = curr.next; // curr后移一位
+    }
+    return head // 返回头节点
+}
+var addTwoNumbers = function (l1, l2) {
+    let l = cur = new ListNode(0)
+    let flag = 0 // 进位标志 0：不进位，1：进位
+    let sum = null
+    while(l1 || l2) {
+        sum = l1.val + l2.val + flag
+        flag = sum >= 10 ? 1 : 0
+        cur.next = new ListNode(sum % 10)
+        l.val = sum >= 10 ? 0 : sum
+
+        console.log('cur ==',cur)
+        cur = cur.next
+        if(l1) {
+            l1 = l1.next
+        }
+        if(l2) {
+            l2 = l2.next
+        }
+    }
+    return cur
+
+};
+const l1 = generateLinklist([2,4,3]);
+const l2 = generateLinklist([5,6,4]);
+// console.log(l1)
+console.log('result',addTwoNumbers(l1,l2))
 // @lc code=end
 
