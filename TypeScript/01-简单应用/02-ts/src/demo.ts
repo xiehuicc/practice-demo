@@ -1,0 +1,2 @@
+
+const testName:string = 'teacher'
