@@ -31,6 +31,11 @@ class Classroom {
       }
     }
   }
+
+  // 用生成器替代迭代器
+  // *[Symbol.iterator]() {
+  //   yield* this.student
+  // }
 }
 
 const classroom = new Classroom('上高二中','计算机教室', ['james','kobe','curry','lacus'])
