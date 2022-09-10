@@ -16,7 +16,6 @@ const getJSON = function(url) {
       client.responseType = "json";
       client.setRequestHeader("Accept", "application/json");
       client.send();
-  
     });
   
     return promise;

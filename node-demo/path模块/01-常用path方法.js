@@ -1,8 +1,8 @@
 const path = require('path')
 
 const filepath = '/user/why/abc.txt'
-console.log(__dirname)
-console.log(__filename)
+console.log('__dirname:',__dirname)
+console.log('__filename:',__filename)
 const pathOne = path.resolve(__dirname,'/abc')
 const pathTwo = path.resolve('/one','/two')
 const pathSec = path.resolve('/foo/bar', './baz');
