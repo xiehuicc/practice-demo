@@ -42,16 +42,17 @@ function generateLinklist(arr) {
     return head // 返回头节点
 }
 var addTwoNumbers = function (l1, l2) {
-    let l = cur = new ListNode(0)
+    let l =  new ListNode(0)
+    let cur = l  // 当前指针
     let flag = 0 // 进位标志 0：不进位，1：进位
     let sum = null
-    while(l1 || l2) {
-        sum = l1.val + l2.val + flag
+    while(flag || l1 || l2) {
+        // sum = l1.val + l2.val +flag
+        let val1 = l1 !== null ? l1.val : 0
+        let val2 = l2 !== null ? l2.val : 0
+        sum = val1 + val2 + flag
         flag = sum >= 10 ? 1 : 0
         cur.next = new ListNode(sum % 10)
-        l.val = sum >= 10 ? 0 : sum
-
-        console.log('cur ==',cur)
         cur = cur.next
         if(l1) {
             l1 = l1.next
@@ -60,12 +61,12 @@ var addTwoNumbers = function (l1, l2) {
             l2 = l2.next
         }
     }
-    return cur
+    console.log('=======',l.next)
+    return l.next // 返回虚拟节点后面的节点
 
 };
 const l1 = generateLinklist([2,4,3]);
 const l2 = generateLinklist([5,6,4]);
-// console.log(l1)
 console.log('result',addTwoNumbers(l1,l2))
 // @lc code=end
 
