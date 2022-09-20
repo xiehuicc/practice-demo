@@ -1,0 +1,17 @@
+{
+  "name": "concurrency",
+  "version": "1.0.0",
+  "description": "",
+  "main": "01-eventproxy.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^3.2.4",
+    "cheerio": "^1.0.0-rc.12",
+    "eventproxy": "^1.0.0",
+    "superagent": "^8.0.0"
+  }
+}
