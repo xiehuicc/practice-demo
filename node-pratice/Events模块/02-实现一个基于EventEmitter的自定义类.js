@@ -41,7 +41,7 @@ async function doMain() {
 
 doMain()
 
-
+// node中实现睡眠
 async function sleep(s) {
   return new Promise(function(resolve, reject) {
       setTimeout(function() {
