@@ -1,3 +1,14 @@
+/* 
+    master.js 主要处理以下逻辑：
+
+    1.创建一个 server 并监听 3000 端口。
+    2.根据系统 cpus 开启多个子进程
+    3.通过子进程对象的 send 方法发送消息到子进程进行通信
+    4.在主进程中监听了子进程的变化，如果是自杀信号重新启动一个工作进程。
+    5.主进程在监听到退出消息的时候，先退出子进程在退出主进程
+*/
+
+
 const fork = require('child_process').fork;
 const cpus = require('os').cpus();
 
@@ -11,6 +22,7 @@ const workers = {};
 const createWorker = () => {
     const worker = fork('worker.js')
     worker.on('message', function (message) {
+        console.log('监听到子进程发送的消息:',message)
         if (message.act === 'suicide') {
             createWorker();
         }

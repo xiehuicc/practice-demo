@@ -1,0 +1,15 @@
+{
+  "name": "async-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "01.async.queue.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^3.2.4",
+    "bagpipe": "^0.3.5"
+  }
+}
