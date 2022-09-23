@@ -45,6 +45,9 @@ request(url,function(err,res,body){
         console.log('下载花费时间:'+(end-start));
       })
     }
+    bagpipe.on('full', function(length) {
+      console.warn('底层系统处理不能及时完成，队列拥堵，目前队列长度为：' + length);
+    })
   }
 });
 
