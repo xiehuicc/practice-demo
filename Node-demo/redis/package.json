@@ -1,0 +1,18 @@
+{
+  "name": "redispratice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "reids实现发布订阅模式.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ioredis": "^5.2.3",
+    "redis": "^3.1.2",
+    "redlock": "^5.0.0-beta.2",
+    "uuid": "^9.0.0"
+  }
+}
