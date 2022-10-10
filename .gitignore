@@ -1,8 +1,9 @@
-*/node_modules
-TypeScript/02-parcel编译ts文件/node_modules
-TypeScript/03-crawler/node_modules
-TypeScript/04-类的装饰器/node_modules
-Node-demo/cpu-frame-graph/node_modules
-Node-demo/控制并发(处理高并发)/node_modules
-node-pratice/异步编程的解决方案/3.流程控制库/node_modules
-Node-demo/redis/node_modules
+# */node_modules
+# TypeScript/02-parcel编译ts文件/node_modules
+# TypeScript/03-crawler/node_modules
+# TypeScript/04-类的装饰器/node_modules
+# Node-demo/cpu-frame-graph/node_modules
+# Node-demo/控制并发(处理高并发)/node_modules
+# node-pratice/异步编程的解决方案/3.流程控制库/node_modules
+# Node-demo/redis/node_modules
+**/node_modules
