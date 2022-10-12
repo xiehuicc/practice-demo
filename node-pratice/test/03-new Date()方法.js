@@ -11,4 +11,16 @@ function getDeviceParam(floor) {
     console.log(endTime) 
 }
 
-console.log(getDeviceParam('2F'))
+// console.log(getDeviceParam('2F'))
+
+
+
+let endDateTime = "2022-10-12T04:00:00.000Z"
+let startDateTime = "2022-10-12T03:30:00.000Z"
+let dateNow = new Date()
+console.log(dateNow)
+if(Date.parse(dateNow) > Date.parse(endDateTime))  {
+  console.log(1111111111)
+  } else if(Date.parse(startDateTime) < Date.parse(dateNow) && Date.parse(dateNow)< Date.parse(endDateTime)) {
+    console.log(2222222222)
+}

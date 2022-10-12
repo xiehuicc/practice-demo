@@ -1,16 +1,14 @@
 {
-  "name": "demo",
+  "name": "staticdemo",
   "version": "1.0.0",
   "description": "",
-  "main": "01-日历.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "dayjs": "^1.11.5",
-    "moment": "^2.29.4"
+    "express": "^4.18.2"
   }
 }
