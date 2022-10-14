@@ -1,0 +1,2 @@
+init:  2 FSREQCALLBACK 1
+fs.open asyncId: 2, fs.open triggerAsyncId: 1
