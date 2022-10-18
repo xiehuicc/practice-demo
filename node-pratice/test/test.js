@@ -1,6 +1,7 @@
 class device{
   // #开头的是私有属性
   #id
+  #ticket
   constructor(id) {
     this.#id = id
   }
