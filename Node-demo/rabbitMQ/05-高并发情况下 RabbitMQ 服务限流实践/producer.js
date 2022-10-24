@@ -8,15 +8,18 @@ async function producer() {
     const channel = await connection.createChannel();
 
     // 3. 声明参数
-    const routingKey = 'helloworldQueue';
-    const msg = 'hello world';
+    const exchangeName = 'qosEx';
+    const routingKey = 'qos.test001';
+    const msg = 'Producer：';
 
+    // 4. 声明交换机
+    await channel.assertExchange(exchangeName, 'topic', { durable: true });
+    
     for (let i=0; i<5; i++) {
-        // 4. 发送消息
-        await channel.publish('', routingKey, Buffer.from(`${msg} 第${i}条消息`));
+      // 5. 发送消息
+      channel.publish(exchangeName, routingKey, Buffer.from(`${msg} 第${i}条消息`));
     }
 
-    // 5. 关闭链接
     await channel.close();
 }
 

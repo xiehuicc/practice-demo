@@ -1,6 +1,6 @@
 var amqp = require('amqplib/callback_api');
 //建立连接
-amqp.connect({protocol:'amqp',hostname:'47.103.142.69',port:5672,username:'admin',password:'admin'},function(err,conn) {
+amqp.connect(('amqp://admin:admin@47.103.142.69:5672/?heartbeat=30'),function(err,conn) {
     if(err) {
       console.log(err);
         return;
