@@ -1,6 +1,6 @@
 const moment = require('moment');
 const dayjs = require('dayjs')
-console.log(moment('2022-10-24T05:30:00.000Z').format('HH:mm a')); // 24小时制  显示13:30 pm
+console.log(moment('2022-10-24T05:30:00.000Z').format('hh:mm a')); // 24小时制  显示13:30 pm
 // console.log(moment('2022-10-24T05:30:00.000Z').format('HH:mm') < moment('2022-10-24T04:00:00.000Z').format('HH:mm'));
 // const momentNow = (moment().format('HH:mm') < moment('12:00').format('HH:mm')) ? moment().format('HH:mm')+ 'AM' : moment().format('HH:mm')+ 'PM'
 
