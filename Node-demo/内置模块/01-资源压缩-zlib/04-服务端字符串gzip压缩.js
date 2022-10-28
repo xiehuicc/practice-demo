@@ -10,9 +10,10 @@ const server = http.createServer(function(req,res) {
     res.writeHead(200, {
       'content-encoding': 'gzip'
     })
+    console.log('zlib after', zlib.gzipSync(responseText))
     res.end(zlib.gzipSync(responseText) );
   } else {
-    res.end(responseText)
+    res.end('ni hao')
   }
 })
 
