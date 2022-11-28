@@ -15,11 +15,16 @@ const logConfig = {
       daysToKeep: 15,
       maxLogSize: 104800,
       backups: 10
+    },
+    default: {
+      type: 'stdout',
     }
   },
   categories: {
+    // 指定输出到文件中
     response: {appenders: ['response'], level: 'info'},
-    default: { appenders: ['response'], level: 'info'}
+    // 需要指定一个默认输出，可以将默认输出指定为控制台
+    default: { appenders: ['default'], level: 'info'}
 },
 }
 const user = [
