@@ -10,15 +10,13 @@ async function pictureTobase64 (url) {
       const chunks = []; //用于保存网络请求不断加载传输的缓冲数据
       let size = 0; //保存缓冲数据的总长度
       res.on('data',function(chunk){
-        console.log(chunk,'///')
         chunks.push(chunk); //在进行网络请求时，会不断接收到数据(数据不是一次性获取到的)
         size += chunk.length;//累加缓冲数据的长度
       });
       res.on('end',function(err){
-        console.log('chunks', chunks,size);
+        if (err) reject(err)
         const data = Buffer.concat(chunks, size);//Buffer.concat将chunks数组中的缓冲数据拼接起来，返回一个新的Buffer对象赋值给data
         const base64Img = 'data:image/jpg;base64,' + data.toString('base64');//将Buffer对象转换为字符串并以base64编码格式显示
-        // console.log(base64Img)
         resolve({success: true, base64Img});
       });
     })
