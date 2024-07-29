@@ -97,7 +97,7 @@ class RedisLock {
 
     try {
       const result = await self.client.eval(script, 1, key, val)
-
+      console.log('unlock', result)
       if(result === 1) return true;
       return false;
     } catch (error) {

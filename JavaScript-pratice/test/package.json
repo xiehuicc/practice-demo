@@ -3,10 +3,12 @@
   "version": "1.0.0",
   "description": "",
   "main": "01-data-type.js",
+  "type": "module",
   "dependencies": {
-    "md5": "^2.3.0"
+    "lodash": "^4.17.21",
+    "md5": "^2.3.0",
+    "ws": "^8.13.0"
   },
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

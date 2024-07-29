@@ -3,6 +3,7 @@ const redis = new Redis(6379, "127.0.0.1");
 const uuidv1 = require('uuid').v1;
 const RedisLock = require('./02-redis实现分布式锁').RedisLock
 
+// console.log('==========',redis)
 const redisLock = new RedisLock(redis);
 
 function sleep(time) {

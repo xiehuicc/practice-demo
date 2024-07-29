@@ -28,3 +28,8 @@ function getDeviceParam(floor) {
 const date = new Date()
 date.setHours(8)
 console.log(date)
+
+import moment from "moment"
+
+const todayNow = moment(new Date()).format('YYYY-MM-DD HH:MM')
+console.log(todayNow)

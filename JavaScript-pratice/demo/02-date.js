@@ -20,3 +20,20 @@ console.log(moment('2022-10-24T05:30:00.000Z').format('hh:mm a')); // 24小时�
 // const num = new Date(todo_deadline).getTime() - new Date(todo_date).getTime()
 // const days2 = num/(1000 * 3600 * 24)
 // console.log(num,days,days2)
+
+const end_date = moment().weekday(7); // 
+const choosedDate = {
+  type: Date,
+  required: true
+}
+console.log(end_date);
+console.log(moment().day(7));
+console.log(moment().add(7, 'days').format("YYYY-MM-DD"));
+moment().format('HH:mm');
+const nowDate = moment().format('YYYY-MM-DD');
+const diff = nowDate === moment(choosedDate).format('YYYY-MM-DD')
+console.log(diff);
+for (let i = 0; i < array.length; i++) {
+  const element = array[i];
+  
+}
